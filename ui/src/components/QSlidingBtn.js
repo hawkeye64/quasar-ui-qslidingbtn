@@ -170,7 +170,8 @@ export default {
         disable: this.disable
       },
       on: {
-        click: () => this.toggle()
+        click: () => this.toggle(),
+        keyup: e => { e.keyCode === 13 && this.toggle() }
       }
     })
   }

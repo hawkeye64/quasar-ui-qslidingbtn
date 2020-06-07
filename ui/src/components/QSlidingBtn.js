@@ -139,7 +139,7 @@ export default {
     },
 
     toggle () {
-      if (this.parent.multiple === true || this.parent.toggle === true) {
+      if (this.parent.multiple === true || this.parent.toggle === true || this.parent.current !== this.name) {
         this.isOpened !== true
           ? this.parent.__activateTab(this.name, false)
           : this.parent.__deactivateTab(this.name, false)

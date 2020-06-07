@@ -34,7 +34,10 @@ export default {
 
     disable: Boolean,
 
-    tabindex: [String, Number]
+    tabindex: [String, Number],
+
+    labelClass: [ Array, String, Object ],
+    labelStyle: [ Array, String, Object ]
   },
 
   data () {
@@ -65,8 +68,6 @@ export default {
       return {
         overflow: 'hidden',
         height: '100%',
-        // width: `calc((100% - ${closed * this.innerWidthHeight}px) / ${opened})`,
-        // transition: 'all 250ms ease-in-out',
         zIndex: this.hasFocus ? 1 : void 0
       }
     },
@@ -74,8 +75,6 @@ export default {
     closedStyle () {
       return {
         height: '100%',
-        // width: this.innerWidthHeight + 'px',
-        // transition: 'all 250ms ease-in-out',
         zIndex: this.hasFocus ? 1 : void 0
       }
     },
@@ -167,11 +166,12 @@ export default {
         color: this.color,
         textColor: this.textColor,
         hideLabel: this.isOpened !== true,
-        disable: this.disable
+        disable: this.disable,
+        labelClass: this.labelClass,
+        labelStyle: this.labelStyle
       },
       on: {
-        click: () => this.toggle(),
-        keyup: e => { e.keyCode === 13 && this.toggle() }
+        click: () => this.toggle()
       }
     })
   }

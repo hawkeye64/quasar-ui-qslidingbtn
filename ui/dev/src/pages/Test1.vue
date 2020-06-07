@@ -199,6 +199,40 @@
     </div>
 
     <div style="max-width: 400px;">
+      Square/Outline
+      <q-sliding-btn-group
+        v-model="model"
+        square
+        outline
+        unelevated
+      >
+        <q-sliding-btn
+          name="1"
+          icon="bookmark"
+          label="Bookmark"
+          text-color="teal-8"
+        />
+        <q-sliding-btn
+          name="2"
+          icon="event"
+          label="Calendar"
+          text-color="blue-grey-8"
+        />
+        <q-sliding-btn
+          name="3"
+          icon="alarm"
+          label="Alarm"
+          text-color="orange-8"
+        />
+        <q-sliding-btn
+          name="4"
+          icon="directions"
+          label="Directions"
+        />
+      </q-sliding-btn-group>
+    </div>
+
+    <div style="max-width: 400px;">
       Padding
       <q-sliding-btn-group
         v-model="model"
@@ -446,18 +480,6 @@ export default {
     return {
       model: '1'
     }
-  },
-
-  watch: {
-    model (val) {
-      console.log('model changed:', val)
-    }
   }
 }
 </script>
-
-<style lang="sass" scoped>
-.directive-target
-  width: 50px
-  height: 50px
-</style>

@@ -158,6 +158,7 @@ export default {
       staticClass: 'q-sliding-btn',
       style: this.isOpened === true ? this.openedStyle : this.closedStyle,
       directives: [{ name: 'ripple', modifiers: { stop: true }}],
+      attrs: { tabindex: this.computedTabindex },
       props: {
         ...this.filteredProps,
         icon: this.icon,

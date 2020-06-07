@@ -404,6 +404,39 @@
       </q-sliding-btn-group>
     </div>
 
+    <div style="max-width: 400px;">
+      Toggle
+      <q-sliding-btn-group
+        v-model="model"
+        unelevated
+        toggle
+      >
+        <q-sliding-btn
+          name="1"
+          icon="bookmark"
+          label="Bookmark"
+          text-color="teal-8"
+        />
+        <q-sliding-btn
+          name="2"
+          icon="event"
+          label="Calendar"
+          text-color="blue-grey-8"
+        />
+        <q-sliding-btn
+          name="3"
+          icon="alarm"
+          label="Alarm"
+          text-color="orange-8"
+        />
+        <q-sliding-btn
+          name="4"
+          icon="directions"
+          label="Directions"
+        />
+      </q-sliding-btn-group>
+    </div>
+
   </q-page>
 </template>
 

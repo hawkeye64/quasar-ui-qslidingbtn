@@ -23,17 +23,10 @@ export default {
     outline: Boolean,
     push: Boolean,
     flat: Boolean,
-    unelevated: Boolean,
-
-    color: String,
-    textColor: String,
     glossy: Boolean,
-
     square: Boolean,
-    padding: String,
-
-    labelClass: [ Array, String, Object ],
-    labelStyle: [ Array, String, Object ]
+    unelevated: Boolean,
+    padding: String
   },
 
   data () {
@@ -156,8 +149,6 @@ export default {
   render (h) {
     return h('div', {
       staticClass: 'q-sliding-btn-group',
-      class: this.labelClass,
-      style: this.labelStyle,
       on: {
         ...this.$listeners
       },

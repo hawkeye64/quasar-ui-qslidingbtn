@@ -1,16 +1,16 @@
 {
   "name": "quasar-app-extension-qslidingbtn",
   "version": "0.0.1",
-  "description": "A Quasar App Extension",
-  "author": "Jeff Galbraith <jeff.galbraith@xendra.com>",
+  "description": "A Quasar App Extension for QSlidingBtn",
+  "author": "Jeff Galbraith <jeff@quasar.dev>",
   "license": "MIT",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/hawkeye64/quasar-ui-qslidingbtn.git"
   },
-  "bugs": "",
-  "homepage": "",
+  "bugs": "https://github.com/hawkeye64/quasar-ui-qslidingbtn/issues",
+  "homepage": "https://github.com/hawkeye64/quasar-ui-qslidingbtn",
   "dependencies": {
     "quasar-ui-qslidingbtn": "latest"
   },

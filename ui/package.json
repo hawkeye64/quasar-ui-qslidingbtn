@@ -1,7 +1,7 @@
 {
   "name": "quasar-ui-qslidingbtn",
   "version": "0.0.1",
-  "author": "Jeff Galbraith <jeff.galbraith@xendra.com>",
+  "author": "Jeff Galbraith <jeff@quasar.dev>",
   "description": "My awesome component",
   "license": "MIT",
   "module": "dist/index.esm.js",
@@ -19,10 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/hawkeye64/quasar-ui-qslidingbtn.git"
   },
-  "bugs": "",
-  "homepage": "",
+  "bugs": "https://github.com/hawkeye64/quasar-ui-qslidingbtn/issues",
+  "homepage": "https://github.com/hawkeye64/quasar-ui-qslidingbtn",
   "devDependencies": {
     "@rollup/plugin-buble": "^0.20.0",
     "@rollup/plugin-json": "^4.0.0",

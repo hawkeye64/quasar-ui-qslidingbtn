@@ -27,7 +27,7 @@ quasar ext remove qslidingbtn
 > Add other information that's not as important to know
 
 # Donate
-If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).
+If you appreciate the work that went into this, please consider donating to [Quasar](https://donate.quasar.dev) or [Jeff](https://github.com/sponsors/hawkeye64).
 
 # License
-MIT (c) Jeff Galbraith <jeff.galbraith@xendra.com>
+MIT (c) Jeff Galbraith <jeff@quasar.dev>

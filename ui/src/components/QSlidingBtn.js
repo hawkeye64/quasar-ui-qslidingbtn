@@ -27,7 +27,6 @@ export default {
 
     label: [String, Number],
     icon: String,
-    image: String,
 
     color: String,
     textColor: String,
@@ -61,20 +60,9 @@ export default {
       return this.disable === true || this.isOpened === true ? 0 : this.tabindex || 0
     },
 
-    openedStyle () {
-      const total = this.parent.panels.length
-      const opened = this.parent.panels.filter(p => p.isOpened).length
-      const closed = total - opened
+    style () {
       return {
         overflow: 'hidden',
-        height: '100%',
-        zIndex: this.hasFocus ? 1 : void 0
-      }
-    },
-
-    closedStyle () {
-      return {
-        height: '100%',
         zIndex: this.hasFocus ? 1 : void 0
       }
     },
@@ -82,9 +70,16 @@ export default {
     filteredProps () {
       if (this.parent) {
         const props = {}
+        // don't pass these props to QFab, everything else goes
+        const blacklisted = ['value', 'multiple']
         Object.keys(this.parent.$props).forEach(key => {
-          if (key !== 'value' && key !== 'multiple') {
+          if (blacklisted.includes(key) !== true) {
             props[key] = this.parent.$props[key]
+          }
+        })
+        Object.keys(this.$props).forEach(key => {
+          if (blacklisted.includes(key) !== true) {
+            props[key] = this.$props[key]
           }
         })
         return props
@@ -154,21 +149,16 @@ export default {
     }
 
     return h(QFab, {
+      ref: "qfab",
       staticClass: 'q-sliding-btn',
-      style: this.isOpened === true ? this.openedStyle : this.closedStyle,
+      style: this.style,
       directives: [{ name: 'ripple', modifiers: { stop: true }}],
       attrs: { tabindex: this.computedTabindex },
       props: {
         ...this.filteredProps,
-        icon: this.icon,
         activeIcon: this.icon,
-        label: this.label,
-        color: this.color,
-        textColor: this.textColor,
         hideLabel: this.isOpened !== true,
-        disable: this.disable,
-        labelClass: this.labelClass,
-        labelStyle: this.labelStyle
+        ripple: false
       },
       on: {
         click: () => this.toggle()
